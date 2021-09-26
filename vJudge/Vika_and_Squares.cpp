@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    int minNumerb=1999;
+    int minNumerb=9999;
     int n, curr_pos, cnt, prev_pos;
     cin>>n;
     int ara[n+1];
