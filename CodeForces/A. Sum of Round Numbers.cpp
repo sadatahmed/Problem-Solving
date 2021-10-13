@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 vector <int> vec;
-int k=0;
 
 void roundNumber_list(){
     for(int i: vec){
@@ -12,23 +11,24 @@ void roundNumber_list(){
 }
 
 void roundNumber_count(int number){
-    int k=0;
+    int count=0;
     for(int i=10; i<=number*10; i*=10){
         if(number%i!=0){
             vec.push_back(number%i);
             number-=(number%i);
-            k++;
+            count++;
         }
+        //if number=110 (corner case)
         else if(number%10==0){
             continue;
         }
         else{
-            k++;
+            count++;
             vec.push_back(number);
             break;
         }
     }
-    cout<<k<<endl;
+    cout<<count<<endl;
     roundNumber_list();
 }
 
